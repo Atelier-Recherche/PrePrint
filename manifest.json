@@ -1,0 +1,10 @@
+{
+	"id": "preprint",
+	"name": "Preprint",
+	"version": "1.0.0",
+	"minAppVersion": "1.14.0",
+	"description": "Révélateur d'invisibles et conformation typographique française pour l'édition et le print (Unicode prêt pour Typst).",
+	"author": "ATpreprint",
+	"authorUrl": "",
+	"isDesktopOnly": false
+}

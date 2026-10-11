@@ -1,0 +1,164 @@
+/* Preprint — révélateur d'invisibles */
+
+.pp-invisible {
+	border-radius: 1px;
+}
+
+.pp-nbsp {
+	background-color: var(--pp-nbsp-bg);
+}
+.pp-nnbsp {
+	background-color: var(--pp-nnbsp-bg);
+}
+.pp-em {
+	background-color: var(--pp-em-bg);
+}
+.pp-en {
+	background-color: var(--pp-en-bg);
+}
+.pp-trailing {
+	background-color: var(--pp-trailing-bg);
+}
+.pp-soft-hyphen {
+	background-color: var(--pp-softHyphen-bg);
+}
+.pp-nb-hyphen {
+	background-color: var(--pp-nbHyphen-bg);
+}
+.pp-tab {
+	background-color: var(--pp-tab-bg);
+}
+
+/* Glyphes via ::after — opacity tied to --pp-show-glyphs */
+.pp-nbsp::after,
+.pp-nnbsp::after,
+.pp-em::after,
+.pp-en::after,
+.pp-trailing::after,
+.pp-soft-hyphen::after,
+.pp-nb-hyphen::after,
+.pp-tab::after {
+	opacity: var(--pp-show-glyphs, 1);
+	pointer-events: none;
+	font-size: 0.75em;
+	line-height: 1;
+	vertical-align: middle;
+}
+
+.pp-nbsp::after {
+	content: var(--pp-nbsp-glyph);
+}
+.pp-nnbsp::after {
+	content: var(--pp-nnbsp-glyph);
+}
+.pp-em::after {
+	content: var(--pp-em-glyph);
+}
+.pp-en::after {
+	content: var(--pp-en-glyph);
+}
+.pp-trailing::after {
+	content: var(--pp-trailing-glyph);
+}
+.pp-soft-hyphen::after {
+	content: var(--pp-softHyphen-glyph);
+}
+.pp-nb-hyphen::after {
+	content: var(--pp-nbHyphen-glyph);
+}
+.pp-tab::after {
+	content: var(--pp-tab-glyph);
+}
+
+/* Panneau latéral */
+.preprint-view {
+	padding: 12px;
+	overflow-y: auto;
+	font-size: var(--font-ui-small);
+}
+
+.preprint-view h3,
+.preprint-view h4 {
+	margin: 0.8em 0 0.4em;
+}
+
+.preprint-view .pp-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin: 8px 0;
+}
+
+.preprint-view .pp-stats {
+	padding: 8px;
+	border-radius: 6px;
+	background: var(--background-secondary);
+	margin: 8px 0;
+	white-space: pre-wrap;
+}
+
+.preprint-view .pp-change-list {
+	max-height: 280px;
+	overflow-y: auto;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+}
+
+.preprint-view .pp-change-item {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 8px;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.preprint-view .pp-change-item:last-child {
+	border-bottom: none;
+}
+
+.preprint-view .pp-change-meta {
+	color: var(--text-muted);
+	font-size: 0.9em;
+}
+
+.preprint-view .pp-change-sample {
+	font-family: var(--font-monospace);
+	font-size: 0.85em;
+}
+
+.preprint-view .pp-rule-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 4px 0;
+}
+
+.preprint-status-on {
+	color: var(--text-accent);
+}
+
+.preprint-status-off {
+	color: var(--text-muted);
+}
+
+.preprint-about {
+	color: var(--text-muted);
+	font-size: 0.85em;
+	margin-top: 1.2em;
+	line-height: 1.4;
+}
+
+.preprint-color-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.preprint-color-row input[type="color"] {
+	width: 36px;
+	height: 28px;
+	padding: 0;
+	border: none;
+	background: transparent;
+}
